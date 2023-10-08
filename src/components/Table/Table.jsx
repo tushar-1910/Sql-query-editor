@@ -2,7 +2,7 @@ import React from "react";
 import { CSVLink } from "react-csv";
 import TableUI from "./TableUI";
 
-function Table({ query, headers, rows, csvData }) {
+const Table = ({ query, headers, rows, csvData }) => {
   return (
     <div>
       {query ? (
@@ -42,6 +42,6 @@ function Table({ query, headers, rows, csvData }) {
       )}
     </div>
   );
-}
+};
 
 export default Table;

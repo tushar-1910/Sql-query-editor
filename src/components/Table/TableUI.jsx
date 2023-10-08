@@ -1,8 +1,8 @@
 import React from "react";
 
-function TableUI({ headers, rows }) {
+const TableUI = ({ headers, rows }) => {
   return (
-    <div className="w-full h-80 overflow-auto scrollbar-hide">
+    <div className="w-full h-80 overflow-auto scrollbar-hide bg-white">
       <table className="table-auto w-full text-left whitespace-no-wrap">
         <thead>
           <tr>
@@ -33,6 +33,6 @@ function TableUI({ headers, rows }) {
       </table>
     </div>
   );
-}
+};
 
 export default TableUI;

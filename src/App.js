@@ -5,6 +5,7 @@ import PredefinedQuery from "./components/PredefinedQuery";
 import SqlEditor from "./components/SqlEditor";
 import Table from "./components/Table/Table";
 import DataDraw from "./components/Table/DataDraw";
+import HistoryPopup from "./components/HistoryPopup";
 
 function App() {
   const [value, setValue] = useState("select * from customers;");
@@ -13,6 +14,7 @@ function App() {
   const [query, setQuery] = useState("");
   const [defaults, setDefaults] = useState(1);
   const [csvData, setCSVData] = useState([]);
+  const [showHistory, setHistory] = useState(false);
 
   if (value === "") {
     toast.error("Please remove the code and run the query");
@@ -39,7 +41,7 @@ function App() {
   }, [value]);
 
   return (
-    <div className="flex flex-wrap justify-center items-start w-full">
+    <div className="flex flex-wrap justify-center items-start w-full bg-black">
       <div className="w-full lg:w-9/12">
         <div className="flex flex-wrap justify-center items-start w-full">
           <div className="w-full lg:w-3/12">
@@ -47,7 +49,7 @@ function App() {
           </div>
           <div className="w-full lg:w-9/12">
             <div className="flex w-full justify-between">
-              <div className="font-bold text-center py-4 w-28 bg-gray-200">
+              <div className="font-bold text-center py-4 w-40 bg-gray-500 text-white rounded-tl-md rounded-tr-lg">
                 Input
               </div>
               <Buttons
@@ -59,6 +61,7 @@ function App() {
                 setValue={setValue}
                 setDefaults={setDefaults}
                 defaults={defaults}
+                setHistory={setHistory}
               />
             </div>
             <SqlEditor value={value} setValue={setValue} />
@@ -71,8 +74,10 @@ function App() {
         <DataDraw />
       </div>
 
+      <HistoryPopup trigger={showHistory} setTrigger={setHistory} setEditorValue={setValue}/>
+
       <Toaster
-        position="bottom-left"
+        position="top-center"
         gutter={8}
         toastOptions={{
           duration: 3000,

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TablePopup from "./TablePopup";
 import GetTableInfo from "../GetTableInfo";
 
-function TableStructure({ tableName, tableHead, tableNo }) {
+const TableStructure = ({ tableName, tableHead, tableNo }) => {
   const [trigger, setTrigger] = useState(false);
   tableHead = Object.values(tableHead);
 
@@ -56,6 +56,6 @@ function TableStructure({ tableName, tableHead, tableNo }) {
       />
     </div>
   );
-}
+};
 
 export default TableStructure;

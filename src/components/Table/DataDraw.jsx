@@ -1,7 +1,7 @@
 import React from "react";
 import TableStructure from "./TableStructure";
 
-function DataDraw() {
+const DataDraw = () => {
   let customers = require("../Store/customers.json");
   let suppliers = require("../Store/suppliers.json");
   let products = require("../Store/products.json");

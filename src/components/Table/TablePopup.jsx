@@ -1,7 +1,7 @@
 import React from "react";
 import TableUI from "./TableUI";
 
-function TablePopup({ trigger, setTrigger, rows, headers }) {
+const TablePopup = ({ trigger, setTrigger, rows, headers }) => {
   return (
     trigger && (
       <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-40 bg-gray-900 bg-opacity-25">
@@ -17,6 +17,6 @@ function TablePopup({ trigger, setTrigger, rows, headers }) {
       </div>
     )
   );
-}
+};
 
 export default TablePopup;

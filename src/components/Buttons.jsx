@@ -2,18 +2,29 @@ import React from "react";
 import toast from "react-hot-toast";
 import getTableInfo from "./GetTableInfo";
 
-function Buttons({
+const Buttons = ({
   setCSVData,
   setQuery,
   setValue,
+  setHistory,
   setHeaders,
   setRows,
   setDefaults,
   defaults,
   value,
-}) {
+}) => {
+  const localData = JSON.parse(localStorage.getItem("sqlHistory")) || [];
+  if (localData) {
+    if (localData.length > 0) {
+      setDefaults(localData.length + 1);
+    }
+  }
   const runQuery = () => {
     setQuery(value);
+    if (!localData.includes(value)) {
+      localData.push(value);
+      localStorage.setItem("sqlHistory", JSON.stringify(localData));
+    }
     const { tableHeaders, tableRows } = getTableInfo(defaults);
     setHeaders(tableHeaders);
     setRows(tableRows);
@@ -25,9 +36,9 @@ function Buttons({
       });
       setCSVData(temp);
       if (temp.length > 0) {
-        toast.success("Query run");
+        toast.success("Query ran successfully.");
       } else {
-        toast.error("This didn't work.");
+        toast.error("Query failed to run");
       }
     }
   };
@@ -111,8 +122,8 @@ function Buttons({
           <div className="pr-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="21"
+              width="18"
+              height="30"
               viewBox="0 0 31.499 36.001"
               className="fill-current"
             >
@@ -127,8 +138,31 @@ function Buttons({
           <div className="font-bold font-mono">Run Query</div>
         </button>
       </div>
+      <div className="p-2">
+        <button
+          onClick={() => setHistory(true)}
+          className="flex mx-auto text-white bg-indigo-500 border-0 py-2 h-11 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg justify-center items-center"
+        >
+          <div className="pr-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="21"
+              viewBox="0 0 24 24"
+              id="history"
+            >
+              <path
+                d="M11.44,2A10,10,0,0,0,4.56,4.77V3a1,1,0,0,0-2,0V7.5a1,1,0,0,0,1,1H8.06a1,1,0,0,0,0-2H5.66A8,8,0,1,1,11.44,20a1,1,0,1,0,0,2,10,10,0,1,0,0-20Zm0,6a1,1,0,0,0-1,1v3a1,1,0,0,0,1,1h2a1,1,0,0,0,0-2h-1V9A1,1,0,0,0,11.44,8Z"
+                fill="#ffffff"
+                class="color000000 svgShape"
+              ></path>
+            </svg>
+          </div>
+          <div className="font-bold font-mono">History</div>
+        </button>
+      </div>
     </div>
   );
-}
+};
 
 export default Buttons;

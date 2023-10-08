@@ -1,6 +1,6 @@
 import React from "react";
 
-function PredefinedQuery({ setDefaults, setValue }) {
+const PredefinedQuery = ({ setDefaults, setValue }) => {
   const qurtyValue = [
     {
       query: "select * from customers;",
@@ -60,6 +60,6 @@ function PredefinedQuery({ setDefaults, setValue }) {
       </div>
     </div>
   );
-}
+};
 
 export default PredefinedQuery;

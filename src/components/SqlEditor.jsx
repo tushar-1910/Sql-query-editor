@@ -4,7 +4,7 @@ import "ace-builds/src-min-noconflict/mode-mysql";
 import "ace-builds/src-noconflict/theme-sqlserver";
 import "ace-builds/src-min-noconflict/ext-language_tools";
 
-function SqlEditor({ setValue, value }) {
+const SqlEditor = ({ setValue, value }) => {
   return (
     <div className="p-2 w-full bg-gray-200">
       <AceEditor
@@ -32,6 +32,6 @@ function SqlEditor({ setValue, value }) {
       />
     </div>
   );
-}
+};
 
 export default SqlEditor;
