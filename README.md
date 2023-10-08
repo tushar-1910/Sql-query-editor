@@ -1,8 +1,8 @@
-# 💻 REACT SQL Editor
+# 💻 REACT SQL Query Editor
 
 ## 📚 Description
 
-This is a REACT SQL Editor built using ReactJs and TailwindCSS.
+This is a REACT SQL Query Editor built using ReactJs and TailwindCSS.
 
 ## 👨‍💻 Live Demo
 
@@ -10,7 +10,7 @@ This is a REACT SQL Editor built using ReactJs and TailwindCSS.
 <img src="https://img.shields.io/website?url=https://www.codingspace.codes&logo=github&style=flat-square" />
 </a>
 
-Try out the website : [REACT SQL Editor](https://sql-query-editor-opal.vercel.app/)
+Try out the website : [REACT SQL Query Editor](https://sql-query-editor-opal.vercel.app/)
 
 ## 👨‍🔧 Tech Stack
 
@@ -45,17 +45,17 @@ Try out the website : [REACT SQL Editor](https://sql-query-editor-opal.vercel.ap
 Page Load time of this website in desktop is in the range of 0.4 s to 0.6s.
 we can check code spnappyness GTmetrix Grade.
 
-![GTmetrix Grade Report](Screenshot/pageLoadSpeed.PNG)
+![GTmetrix Grade Report](Screenshots/pageLoadSpeed.PNG)
 
 ### [web.dev Report](https://pagespeed.web.dev/)
 
 Laptop performance view
 
-![web.dev Report](Screenshot/DesktopSpeed.PNG)
+![web.dev Report](Screenshots/DesktopSpeed.PNG)
 
 Mobile performance view
 
-![web.dev Report](Screenshot/MobileSpeed.PNG)
+![web.dev Report](Screenshots/MobileSpeed.PNG)
 
 ## 🪜 Steps I took to optimize the page load time
 
@@ -64,7 +64,7 @@ Mobile performance view
 
 ## 🚀 Project Output
 
-![Homepage](Screenshot/Main.PNG)
+![Homepage](Screenshots/Main.PNG)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
