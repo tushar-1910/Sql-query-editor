@@ -42,11 +42,12 @@ function App() {
 
   return (
     <div className="flex flex-wrap justify-center items-start w-full bg-black">
+      <div className="w-full lg:w-3/12">
+        <DataStack />
+      </div>
+
       <div className="w-full lg:w-9/12">
         <div className="flex flex-wrap justify-center items-start w-full">
-          <div className="w-full lg:w-3/12">
-            <PredefinedQuery setValue={setValue} setDefaults={setDefaults} />
-          </div>
           <div className="w-full lg:w-9/12">
             <div className="flex w-full justify-between">
               <div className="font-bold text-center py-4 w-40 bg-gray-500 text-white rounded-tl-md rounded-tr-lg">
@@ -66,13 +67,12 @@ function App() {
             </div>
             <SqlEditor value={value} setValue={setValue} />
           </div>
+          <div className="w-full lg:w-3/12">
+            <PredefinedQuery setValue={setValue} setDefaults={setDefaults} />
+          </div>
         </div>
         <Table query={query} headers={headers} rows={rows} csvData={csvData} />
-      </div>
-
-      <div className="w-full lg:w-3/12">
-        <DataStack />
-      </div>
+      </div>      
 
       <HistoryPopup trigger={showHistory} setTrigger={setHistory} setEditorValue={setValue} />
 
