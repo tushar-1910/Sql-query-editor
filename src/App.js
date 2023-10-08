@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import Buttons from "./components/Buttons";
 import PredefinedQuery from "./components/PredefinedQuery";
 import SqlEditor from "./components/SqlEditor";
 import Table from "./components/Table/Table";
-import DataDraw from "./components/Table/DataDraw";
+import DataStack from "./components/DataStack";
 import HistoryPopup from "./components/HistoryPopup";
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
       setDefaults(3);
     } else if (
       value.toLowerCase() ===
-      "select contact_name, address,city,postal_code, country from customers limit 18;"
+      "select contact_name, address, city, postal_code, country from customers limit 18;"
     ) {
       setDefaults(4);
     } else {
@@ -71,10 +71,10 @@ function App() {
       </div>
 
       <div className="w-full lg:w-3/12">
-        <DataDraw />
+        <DataStack />
       </div>
 
-      <HistoryPopup trigger={showHistory} setTrigger={setHistory} setEditorValue={setValue}/>
+      <HistoryPopup trigger={showHistory} setTrigger={setHistory} setEditorValue={setValue} />
 
       <Toaster
         position="top-center"

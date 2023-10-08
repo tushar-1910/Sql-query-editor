@@ -1,10 +1,10 @@
 import React from "react";
-import TableStructure from "./TableStructure";
+import TableStructure from "./Table/TableStructure";
+import customers from "./Store/customers.json";
+import suppliers from "./Store/suppliers.json";
+import products from "./Store/products.json";
 
-const DataDraw = () => {
-  let customers = require("../Store/customers.json");
-  let suppliers = require("../Store/suppliers.json");
-  let products = require("../Store/products.json");
+const DataStack = () => {
   return (
     <div className="w-full h-screen overflow-auto scrollbar-hide py-4">
       <TableStructure
@@ -12,13 +12,13 @@ const DataDraw = () => {
         tableName="customers"
         tableNo={1}
       />
-      <div className="w-8/12 border-b-2 mx-auto mt-8 mb-4"></div>
+      <Divider />
       <TableStructure
         tableHead={suppliers[0]}
         tableName="suppliers"
         tableNo={2}
       />
-      <div className="w-8/12 border-b-2 mx-auto mt-8 mb-4"></div>
+      <Divider />
       <TableStructure
         tableHead={products[0]}
         tableName="products"
@@ -26,6 +26,10 @@ const DataDraw = () => {
       />
     </div>
   );
-}
+};
 
-export default DataDraw;
+const Divider = () => (
+  <div className="w-8/12 border-b-2 mx-auto mt-8 mb-4"></div>
+);
+
+export default DataStack;
