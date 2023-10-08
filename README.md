@@ -59,7 +59,7 @@ Mobile performance view
 
 ## 🪜 Steps I took to optimize the page load time
 
-- Used Lighthouse DevTools Extension to find the performance issues and fix them using their actionable suggestion.
+- Used lightweight external packages so that loading time could be reduced.
 - Used vercel to deploy this website to leverage its Vercel Edge Network compression that results in the better performance.
 
 ## 🚀 Project Output
