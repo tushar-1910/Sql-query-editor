@@ -37,7 +37,7 @@ const Table = ({ query, headers, rows, csvData }) => {
         </section>
       ) : (
         <div className="w-full flex text-center h-80 justify-center items-center font-bold font-mono text-gray-400 text-2xl px-6">
-          Run Something & Your Output Shall Appear!
+          Run your query, and there is your output!
         </div>
       )}
     </div>
