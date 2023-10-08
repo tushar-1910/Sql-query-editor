@@ -45,17 +45,17 @@ Try out the website : [REACT SQL Query Editor](https://sql-query-editor-opal.ver
 Page Load time of this website in desktop is in the range of 0.4 s to 0.6s.
 we can check code spnappyness GTmetrix Grade.
 
-![GTmetrix Grade Report](Screenshots/pageLoadSpeed.PNG)
+![GTmetrix Grade Report]Screenshots/pageLoadSpeed.png)
 
 ### [web.dev Report](https://pagespeed.web.dev/)
 
 Laptop performance view
 
-![web.dev Report](Screenshots/DesktopSpeed.PNG)
+![web.dev Report](Screenshots/DesktopSpeed.png)
 
 Mobile performance view
 
-![web.dev Report](Screenshots/MobileSpeed.PNG)
+![web.dev Report](Screenshots/MobileSpeed.png)
 
 ## 🪜 Steps I took to optimize the page load time
 
@@ -64,7 +64,7 @@ Mobile performance view
 
 ## 🚀 Project Output
 
-![Homepage](Screenshots/Main.PNG)
+![Homepage](Screenshots/Main.png)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
